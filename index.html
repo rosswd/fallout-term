@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Fallout Password Terminal</title>
+    <meta name=viewport content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css" type='text/css'>
+    <link rel="stylesheet" href="css/main.css" type='text/css'>
+</head>
+<body>
+<header>
+  <h1 class="super-h1">MCSS G-ole 6000 T.A.C v.2</h1>
+  <h3>Welcome to the Fallout Terminal Management System</h3>
+  <p>Details about the services offered by this Terminal are outlined below.</p>
+  <p>Have a <span class="impact-span">nuclear day!</span></p>
+  <footer class="footer-logo">&reg;2089 Mushroom Cloud Security Systems</footer>
+</header>
+
+  <img src="img/cloud_800_600.png" alt="Mushroom Corp. Security Systems Logo" >
+
+<div class="help-div">
+  <p>Good day comrade! This terminal offers access to three separate
+    systems, each requiring a greater level of clearance than the last.
+    Those areas are <span class="impact-span">Billing</span>,
+    <span class="impact-span">Human Resources</span> and
+    <span class="impact-span">Mainframe Access</span>.
+  </p>
+  <p>The G-ole 6000 Terminal is generation two, <span class="strong-span">meaning</span>, when you make a mistake
+    entering your password, the Terminal graciously informs you exactly
+    how many characters are invalid. Based on your required level of access you
+    are allowed a maximum number of attempts before Central are notifed and your
+    activity relayed. Trust us when we say that it is a level of unfriendliness your
+    day will not welcome.
+  </p>
+</div>
+
+  <h3>Choose System to access (1, 2 or 3):</h3>
+    <table class="dept-table">
+      <thead>
+        <tr>
+            <th scope="col">No.</th>
+            <th scope="col">System</th>
+            <th scope="col">Tries</th>
+            <th scope="col">Passwords</th>
+            <th scope="col">Password Length</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Billing</td>
+          <td>5</td>
+          <td>8</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Human Resources</td>
+          <td>4</td>
+          <td>10</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Mainframe Access</td>
+          <td>3</td>
+          <td>12</td>
+          <td>15</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="passwd-grid" id="js-pwd-grid">
+
+    </div>
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

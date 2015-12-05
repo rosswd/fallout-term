@@ -1,0 +1,77 @@
+/*
+ * light gray : #939393 (table borders)
+ * dark gray  : #3C423C (background)
+ * lime green : #3FBF3F (text general)
+ * white      : #FFFFFF (text emphasis)
+ * gray/white : #DBE0DB (text logo)
+*/
+
+body {
+    font-family: "Orbitron", sans-serif;
+    color: #3FBF3F;
+    background-color: #3C423C;
+}
+
+header {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.super-h1 {
+  font-size: 48px;
+}
+
+.impact-span {
+  text-decoration: underline;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+.strong-span {
+  font-style: italic;
+}
+
+.footer-logo {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #DBE0DB;
+  width: 50%;
+  word-spacing: 0.2em;
+}
+
+img {
+  margin: 0 220px;
+}
+
+.help-div {
+  line-height: 1.6em;
+}
+
+.dept-table {
+    border-spacing: 10px;
+    padding: 2px;
+    width: 100%;
+    min-width: 600px;
+}
+
+td {
+    border: 1px solid #939393;
+    text-align: center;
+    padding: 3px;
+}
+
+th {
+    border: 1px solid #939393;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+  width: 100%;
+  min-width: 40em;
+  word-spacing: 0.3em;
+}
+
+.passwd-grid {
+  width: 400px;
+}
