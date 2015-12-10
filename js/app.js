@@ -6,6 +6,10 @@ $(function() {
   $passwordGrid = $("#js-pwd-grid");
   $passwordGrid.hide();
 
+  // Hide Terminal Div
+  $terminalDiv = $("#js-terminal-div");
+  $terminalDiv.hide();
+
   // Create password lists
   var billingPasswords = [
     'kreolo',
@@ -119,9 +123,29 @@ $(function() {
           }
 
           $(this).show();
-        }); // .slideUp() ends
+          $('html, body').animate({
+            scrollTop: $("#js-pwd-grid p").offset().top
+          }, 500);
+        }); // .slideDown() ends
       }
     ); // .click() ends
   }); // .each() ends
+
+  $passwordGrid.on("click", function() {
+    var hSecret = createSecret(hrPasswords);
+    console.log(hSecret);
+    $("p").on("click", function() {
+      if ($(this).text() === hSecret) {
+        $terminalDiv.show();
+        $terminalDiv.append("<h1>Ready > <span>|</span></h1>")
+        $('html, body').animate({
+          scrollTop: $("#js-terminal-div").offset().top
+        }, 100);
+      } else {
+        console.log($(this).text() + ' is not correct!');
+      }
+      return false;
+    });
+  });
 
 }); // main jquery ready ends
