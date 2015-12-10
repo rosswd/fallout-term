@@ -21,6 +21,7 @@ header {
   font-size: 48px;
   margin-top: 20px;
   padding-top: 10px;
+  font-weight: 700;
 }
 
 .impact-span {
@@ -47,6 +48,16 @@ img {
 
 .help-div {
   line-height: 1.6em;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.menu-h3 {
+  margin: 0 auto;
+  width: 60%;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  color: #FFFFFF;
 }
 
 .dept-table {
@@ -73,6 +84,7 @@ p {
   min-width: 40em;
   word-spacing: 0.3em;
   padding: 3px 0 3px 2px;
+  font-weight: 400;
 }
 
 .passwd-grid {
