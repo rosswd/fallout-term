@@ -109,7 +109,7 @@ $(function() {
       }
     ); // .hover() ends
 
-    $(this).click(
+    $(this).one("click",  // one() stops subsequent clicks, on() does not
       function() {
         $(this).css({
           'background-color': '#FFFFFF',
@@ -125,7 +125,7 @@ $(function() {
           $(this).show();
           $('html, body').animate({
             scrollTop: $("#js-pwd-grid p").offset().top
-          }, 500);
+          }, 1500);
         }); // .slideDown() ends
       }
     ); // .click() ends
@@ -140,7 +140,7 @@ $(function() {
         $terminalDiv.append("<h1>Ready > <span>|</span></h1>")
         $('html, body').animate({
           scrollTop: $("#js-terminal-div").offset().top
-        }, 100);
+        }, 500);
       } else {
         console.log($(this).text() + ' is not correct!');
       }
