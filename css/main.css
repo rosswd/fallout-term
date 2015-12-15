@@ -1,14 +1,14 @@
 /*
- * light gray : #939393 (table borders)
- * dark gray  : #3C423C (background)
- * lime green : #3FBF3F (text general)
- * white      : #FFFFFF (text emphasis)
- * gray/white : #DBE0DB (text logo)
+ * light gray     : #939393 (table borders)
+ * dark gray      : #3C423C (background)
+ * fallout yellow : #FFE032 (text general)
+ * white          : #FFFFFF (text emphasis)
+ * gray/white     : #DBE0DB (text logo)
 */
 
 body {
   font-family: "Orbitron", sans-serif;
-  color: #3FBF3F;
+  color: #FFE032;
   background-color: #3C423C;
 }
 
@@ -102,8 +102,7 @@ p {
   width: 100%;
   height: 1024px;
   border: 2px solid #939393;
-  background-color: #3FBF3F;
-  color: #FFFFFF;
+  color: #FFE032;
   font-weight: 400;
 }
 
