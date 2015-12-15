@@ -109,6 +109,9 @@ p {
 
 .terminal span {
   -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
   animation: 1s blink step-end infinite;
 }
 
@@ -117,11 +120,38 @@ p {
     color: transparent;
   }
   50% {
-    color: #;
+    color: #FFFFFF;
+  }
+}
+
+@-moz-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #FFFFFF;
   }
 }
 
 @-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #FFFFFF;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #FFFFFF;
+  }
+}
+
+@-o-keyframes "blink" {
   from, to {
     color: transparent;
   }
