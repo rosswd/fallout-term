@@ -67,7 +67,7 @@ img {
   padding: 2px;
   max-width: 80%;
   min-width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 16px;
 }
 
 td {
@@ -83,19 +83,18 @@ th {
 }
 
 p {
-  width: 100%;
-  min-width: 40em;
   word-spacing: 0.3em;
   padding: 3px 0 3px 2px;
   font-weight: 400;
 }
 
-.passwd-grid {
-  width: 400px;
-}
+.passwd-grid {}
 
 .passwd-grid p {
   border: 1px solid #939393;
+  margin: 0 auto 8px;
+  padding: 6px 0px 2px 6px;
+  width: 25%;
 }
 
 .terminal {
