@@ -135,7 +135,8 @@ $(function() {
 
         if ($(this).text() === hSecret) {
           $terminalDiv.show();
-          $terminalDiv.append("<h2>Ready > <span>|</span></h2>");
+          $terminalDiv.append("<h3>Ready > <span>|</span></h3>");
+          $terminalDiv.prepend("<h2>Basic OK</h2>")
 
           $('html, body').animate({
             scrollTop: $("#js-terminal-div").offset().top
