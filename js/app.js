@@ -110,7 +110,7 @@ $(function() {
     ); // .hover() ends
 
     $(this).one("click",  // one() stops subsequent clicks, on() does not
-      function() {
+      function() {       // ...hmm, clicking a different cell fails
         $(this).css({
           'background-color': '#FFFFFF',
           'border': '3px solid'
@@ -137,7 +137,7 @@ $(function() {
     $("p").on("click", function() {
       if ($(this).text() === hSecret) {
         $terminalDiv.show();
-        $terminalDiv.append("<h1>Ready > <span>|</span></h1>")
+        $terminalDiv.append("<h1>Ready > <span>|</span></h1>");
         $('html, body').animate({
           scrollTop: $("#js-terminal-div").offset().top
         }, 500);
