@@ -125,15 +125,17 @@ $(function() {
     var hSecret = createSecret(hrPasswords);
     console.log(hSecret);
     var attempts = 0;
+
     $("p").on("click", function() {
       var charsCorrect = 0;
+      charsCorrect = checkPassword($(this).text(), hSecret);
+
       console.log((HR_GUESSES - attempts) + " attempts remaining");
       attempts += 1;
-      charsCorrect = checkPassword($(this).text(), hSecret);
 
       if ($(this).text() === hSecret) {
         $terminalDiv.show();
-        $terminalDiv.append("<h1>Ready > <span>|</span></h1>");
+        $terminalDiv.append("<h2>Ready > <span>|</span></h2>");
 
         $('html, body').animate({
           scrollTop: $("#js-terminal-div").offset().top
