@@ -2,6 +2,10 @@
 
 $(function() {
 
+  // Hide Status Div
+  $statusDiv = $("#js-status-div");
+  $statusDiv.hide();
+
   // Hide Password Grid
   $passwordGrid = $("#js-pwd-grid");
   $passwordGrid.hide();
@@ -113,6 +117,9 @@ $(function() {
             $(this).append("<p>" + hrPasswords[i] + "</p>");
           }
 
+          $statusDiv.append("<h2>Results</h2>");
+          $statusDiv.show();
+
           $(this).show();
           $('html, body').animate({
             scrollTop: $("#js-pwd-grid p").offset().top
@@ -131,7 +138,8 @@ $(function() {
       var charsCorrect = 0;
 
       if (attempts < HR_GUESSES) {
-        console.log((HR_GUESSES - attempts) + " attempts remaining");
+        $statusDiv.append("<p>Attempts remaining: " + (HR_GUESSES - attempts) + "</p>");
+        // console.log((HR_GUESSES - attempts) + " attempts remaining");
 
         if ($(this).text() === hSecret) {
           $terminalDiv.show();
