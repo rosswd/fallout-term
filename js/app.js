@@ -71,25 +71,15 @@ $(function() {
   var mfSecret      = createSecret(mfPasswords);
 
   // Function to check how many characters are correct
-  function checkPassword($passwd, secret) {
+  function checkPassword(passwd, secret) {
     var correct = 0;
-    for (var i = 0; i < $passwd.length; i++) {
-      for (var j = 0; j < secret.length; j++) {
-        if ($passwd[i] === secret[j]) {
-          correct++;
-        }
+    for (var i = 0; i < passwd.length; i++) {
+      if (passwd.charAt([i]) === secret[i]) {
+        correct++;
       }
     }
     return correct;
   }
-
-  // function printPasswords(passwdList) {
-  //   $printDiv.prepend("<p>Here's your password list, choose wisely:</p>");
-  //
-  //   for (var i = 0; i < passwdList.length; i++) {
-  //     $printLi.append("<li>" + passwdList[i] + "</li>");
-  //   }
-  // }
 
   $thCells = $("tbody tr th");
 
@@ -134,16 +124,30 @@ $(function() {
   $passwordGrid.on("click", function() {
     var hSecret = createSecret(hrPasswords);
     console.log(hSecret);
+    var attempts = 0;
     $("p").on("click", function() {
+      var charsCorrect = 0;
+      console.log((HR_GUESSES - attempts) + " attempts remaining");
+      attempts += 1;
+      charsCorrect = checkPassword($(this).text(), hSecret);
+
       if ($(this).text() === hSecret) {
         $terminalDiv.show();
         $terminalDiv.append("<h1>Ready > <span>|</span></h1>");
+
         $('html, body').animate({
           scrollTop: $("#js-terminal-div").offset().top
         }, 500);
+
       } else {
         console.log($(this).text() + ' is not correct!');
+        console.log(charsCorrect + " correct");
       }
+
+      if (attempts === HR_GUESSES) {
+        console.log('Maximum attempts exceeded.');
+      }
+
       return false;
     });
   });
