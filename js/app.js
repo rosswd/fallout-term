@@ -87,7 +87,8 @@ $(function() {
     $(this).hover(
       function() { // mouseenter
         $(this).css({
-          'background-color': '#FFFFFF',
+          // 'background-color': '#FFFFFF',
+          'background-color': '#939393',
           'border': '1px solid #3C423C'
         });
       },
@@ -128,26 +129,27 @@ $(function() {
 
     $("p").on("click", function() {
       var charsCorrect = 0;
-      charsCorrect = checkPassword($(this).text(), hSecret);
 
-      console.log((HR_GUESSES - attempts) + " attempts remaining");
-      attempts += 1;
+      if (attempts < HR_GUESSES) {
+        console.log((HR_GUESSES - attempts) + " attempts remaining");
 
-      if ($(this).text() === hSecret) {
-        $terminalDiv.show();
-        $terminalDiv.append("<h2>Ready > <span>|</span></h2>");
+        if ($(this).text() === hSecret) {
+          $terminalDiv.show();
+          $terminalDiv.append("<h2>Ready > <span>|</span></h2>");
 
-        $('html, body').animate({
-          scrollTop: $("#js-terminal-div").offset().top
-        }, 500);
+          $('html, body').animate({
+            scrollTop: $("#js-terminal-div").offset().top
+          }, 500);
+        }
 
-      } else {
-        console.log($(this).text() + ' is not correct!');
+        charsCorrect = checkPassword($(this).text(), hSecret);
         console.log(charsCorrect + " correct");
-      }
 
-      if (attempts === HR_GUESSES) {
-        console.log('Maximum attempts exceeded.');
+        attempts += 1;
+
+        if (attempts === HR_GUESSES) {
+          console.log('Maximum attempts exceeded.');
+        }
       }
 
       return false;
