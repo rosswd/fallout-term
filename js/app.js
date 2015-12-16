@@ -139,12 +139,10 @@ $(function() {
 
       if (attempts < HR_GUESSES) {
         $statusDiv.append("<p>Attempts remaining: " + (HR_GUESSES - attempts) + "</p>");
-        // console.log((HR_GUESSES - attempts) + " attempts remaining");
 
         if ($(this).text() === hSecret) {
           $terminalDiv.show();
-          $terminalDiv.append("<h3>Ready > <span>|</span></h3>");
-          $terminalDiv.prepend("<h2>Basic OK</h2>")
+          $terminalDiv.append("<h3> > <span>|</span></h3>");
 
           $('html, body').animate({
             scrollTop: $("#js-terminal-div").offset().top
